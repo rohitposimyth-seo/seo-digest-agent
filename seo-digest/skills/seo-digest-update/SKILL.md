@@ -21,7 +21,7 @@ Get the `version` field. If the file doesn't exist: "SEO Digest isn't set up yet
 
 ## Step 2 — Check Latest Version
 
-Fetch: `https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest/main/VERSION`
+Fetch: `https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest-agent/main/VERSION`
 
 This file contains a single version string like `1.2.0`.
 
@@ -44,13 +44,13 @@ If update available: proceed.
 Download these files and overwrite the local copies:
 
 ```
-https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest/main/skills/seo-digest/SKILL.md
+https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest-agent/main/skills/seo-digest/SKILL.md
 → ~/.claude/skills/seo-digest/SKILL.md
 
-https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest/main/skills/seo-digest-setup/SKILL.md
+https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest-agent/main/skills/seo-digest-setup/SKILL.md
 → ~/.claude/skills/seo-digest-setup/SKILL.md
 
-https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest/main/skills/seo-digest-update/SKILL.md
+https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest-agent/main/skills/seo-digest-update/SKILL.md
 → ~/.claude/skills/seo-digest-update/SKILL.md
 ```
 

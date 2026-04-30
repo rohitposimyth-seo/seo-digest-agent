@@ -63,7 +63,7 @@ Pages that started showing in GSC this week for the first time.
 Open Claude Code and paste this into chat:
 
 ```
-Install SEO Digest by running: curl -fsSL https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest/main/install.sh | bash
+Install SEO Digest by running: curl -fsSL https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest-agent/main/install.sh | bash
 ```
 
 Claude will show what the script does — click **Yes** to confirm. Then run `/seo-digest-setup` to configure your site in 2 minutes.

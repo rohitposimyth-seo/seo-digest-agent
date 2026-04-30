@@ -4,7 +4,7 @@
 
 set -e
 
-REPO_RAW="https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest/main"
+REPO_RAW="https://raw.githubusercontent.com/rohitposimyth-seo/seo-digest-agent/main"
 SKILLS_DIR="$HOME/.claude/skills"
 CONFIG_DIR="$HOME/.claude/seo-digest"
 REPORTS_DIR="$HOME/seo-digest/reports"
