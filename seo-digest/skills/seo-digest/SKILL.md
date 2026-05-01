@@ -484,17 +484,23 @@ Call `mcp__clickup__clickup_send_chat_message` with:
 Message format:
 ```
 📊 SEO Digest — [site_name] — [date]
-Clicks: [X] ([+/-X%]) · Impressions: [X] ([+/-X%]) · Avg pos: [X.X] → [X.X]
 
-🟢 [/slug] — #[prev]→#[curr] · +[delta] clicks
-🟢 [/slug] — #[prev]→#[curr] · +[delta] clicks
-🔴 [/slug] — #[prev]→#[curr] · -[delta] clicks · [diagnosis in 4 words]
-🎯 [/slug] — #[pos] · est +[gain] clicks/week
-⚡ [/slug] — #[pos] · [missed] clicks/week missed on CTR
+Non-brand clicks: [X] ([+/-X%] vs last week)
+Total impressions: [X] ([+/-X%])
+Avg position: [X.X] → [X.X] ([improved/declined/held])
 
-Focus: [single most important action this week — one line]
+This week's focus:
+1. [Most important action — page, metric, what to do]
+2. [Second action — page, metric, what to do]
+3. [Third action — page, metric, what to do]
+4. [Fourth action if relevant — page, metric, what to do]
+5. [Fifth action if relevant — page, metric, what to do]
+6. [Sixth action if relevant — page, metric, what to do]
+
 Full report in Rohit Docs → SEO Digest doc.
 ```
+
+Include 3 focus points minimum. Add up to 6 if there are significant wins, drops, CTR gaps, or cannibalization cases that each need a separate action. Only include extra points if they are genuinely actionable this week — don't pad.
 
 If no DM channel is found for the user: skip silently, do not error.
 
