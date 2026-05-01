@@ -485,16 +485,34 @@ Message format:
 ```
 📊 SEO Digest is ready — [site_name] — [date]
 
-[Non-brand clicks]: [X] ([+/-X%] vs last week)
-[Total impressions]: [X] ([+/-X%])
-[Avg position]: [X.X] → [X.X]
+AT A GLANCE
+Clicks: [X] ([+/-X%] vs last week)
+Impressions: [X] ([+/-X%])
+Avg position: [X.X] → [X.X]
 
-This week's focus:
+🟢 WINS
+• [/slug] — #[prev] → #[curr] · +[delta] clicks
+• [/slug] — #[prev] → #[curr] · +[delta] clicks
+• [/slug] — #[prev] → #[curr] · +[delta] clicks
+
+🔴 DROPS
+• [/slug] — #[prev] → #[curr] · -[delta] clicks · [diagnosis in 5 words]
+• [/slug] — #[prev] → #[curr] · -[delta] clicks · [diagnosis in 5 words]
+
+🎯 QUICK WINS
+• [/slug] — #[pos] · est +[gain] clicks/week
+• [/slug] — #[pos] · est +[gain] clicks/week
+• [/slug] — #[pos] · est +[gain] clicks/week
+
+⚡ TOP CTR GAP
+• [/slug] — #[pos] · [ctr]% CTR (should be [exp]%) · [missed] clicks/week missed
+
+THIS WEEK'S FOCUS
 1. [Action 1 — one line]
 2. [Action 2 — one line]
 3. [Action 3 — one line]
 
-Full report in Rohit Docs → SEO Digest doc.
+Full report → Rohit Docs → SEO Digest doc.
 ```
 
 If no DM channel is found for the user: skip silently, do not error.
