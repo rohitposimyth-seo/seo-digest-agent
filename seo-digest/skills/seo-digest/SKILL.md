@@ -77,32 +77,34 @@ Always state the exact date range at the top of the report.
 
 ## Step 3 — Pull GSC Data
 
+**Fire all 7 calls simultaneously in a single parallel batch.** Do not wait for one before starting the next — they are fully independent.
+
+| Call | Dimensions | Dates | rowLimit |
+|------|-----------|-------|----------|
+| A — Pages W1 | `["page"]` | Week 1 | **250** |
+| B — Pages W2 | `["page"]` | Week 2 | **250** |
+| C — Pages W3 | `["page"]` | Week 3 | **250** |
+| D — Pages W4 | `["page"]` | Week 4 | **250** |
+| E — Queries W1 | `["query"]` | Week 1 | **500** |
+| F — Queries W2 | `["query"]` | Week 2 | **500** |
+| G — Query+Page W1 | `["query","page"]` | Week 1 | **500** |
+
+Do not call `detect_quick_wins` — quick wins are computed from page data in Step 6.
+
 Make all calls silently. Do not show raw results to the user.
 
-**Call A — Pages, Week 1 (current):**
-`mcp__gsc__search_analytics` — dimensions: `["page"]` — rowLimit: 500
+**If responses are too large and saved to disk:** Run the permanent analysis script immediately — do NOT rewrite the analysis logic from scratch:
 
-**Call B — Pages, Week 2:**
-Same, Week 2 dates.
+```
+python3 ~/seomachine/scripts/seo_digest_analysis.py \
+  --dir [tool-results-directory] \
+  --site [slug] \
+  --brand "[comma-separated brand terms]" \
+  --threshold [drop_threshold] \
+  --minutes 30
+```
 
-**Call C — Pages, Week 3:**
-Same, Week 3 dates.
-
-**Call D — Pages, Week 4:**
-Same, Week 4 dates.
-
-**Call E — Queries, Week 1:**
-`mcp__gsc__search_analytics` — dimensions: `["query"]` — rowLimit: 1000
-
-**Call F — Queries, Week 2:**
-Same, Week 2 dates. Used for brand-filtered trend comparison.
-
-**Call G — Query + Page, Week 1:**
-`mcp__gsc__search_analytics` — dimensions: `["query", "page"]` — rowLimit: 1000
-Used to: (1) map primary keywords to pages, (2) detect cannibalization.
-
-**Call H — GSC Quick Wins:**
-`mcp__gsc__detect_quick_wins` for the property.
+The tool-results directory is shown in the saved file paths. The script auto-detects the 7 most recent GSC files, classifies them by type, computes all signals, and prints them. Use that output to write the digest — skip Steps 4–6 and go straight to Step 8.
 
 Store all results in memory. Move to Step 4.
 
@@ -470,11 +472,9 @@ Only if `config.clickup.enabled` is true AND ClickUp MCP is connected.
 
 Only if `config.clickup_notify.enabled` is true AND ClickUp MCP is connected.
 
-**Find the DM channel:**
-Call `mcp__clickup__clickup_get_chat_channels` with `include_hidden: true`.
-- Filter results to type `DM`
-- Find the most recently active DM channel where `creator` matches `config.clickup_notify.user_id`
-- Use that channel's `id` as the DM channel
+**Get the DM channel ID:**
+Use `config.clickup_notify.channel_id` directly — **do NOT call `clickup_get_chat_channels`**.
+If `channel_id` is missing or null in config, only then fall back to the channel lookup (filter `type: DM`, match `creator` to `user_id`, pick most recently active).
 
 **Send the message:**
 Call `mcp__clickup__clickup_send_chat_message` with:
