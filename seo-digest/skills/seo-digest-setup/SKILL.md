@@ -165,15 +165,22 @@ Store as `drop_threshold`. Default: 5.
 
 ## Step 7 — Save Config
 
+If `~/.claude/seo-digest/config.json` already exists, read it first and merge — add the new site into the existing `sites` dict rather than overwriting the whole file.
+
 Write to `~/.claude/seo-digest/config.json`:
 
 ```json
 {
-  "gsc_property": "[selected property URL]",
-  "site_name": "[derived site name]",
-  "brand_terms": ["[term1]", "[term2]"],
+  "sites": {
+    "[site-slug]": {
+      "gsc_property": "[selected property URL]",
+      "site_name": "[derived site name]",
+      "brand_terms": ["[term1]", "[term2]"]
+    }
+  },
   "drop_threshold": 5,
   "dataforseo_enabled": true,
+  "dataforseo_location": "United States",
   "clickup": {
     "enabled": true_or_false,
     "list_id": "[list id or null]",
@@ -185,11 +192,19 @@ Write to `~/.claude/seo-digest/config.json`:
     "user_id": null_or_numeric_id,
     "channel_id": "[DM channel id or null]"
   },
+  "email": {
+    "enabled": false,
+    "address": null
+  },
   "local_reports_path": "~/seo-digest/reports/",
   "version": "2.0.0",
   "setup_date": "[today YYYY-MM-DD]"
 }
 ```
+
+The site-slug is derived from the domain: `nexterwp.com` → `nexterwp`, `theplusaddons.com` → `theplusaddons`, `uichemy.com` → `uichemy`. For other domains: lowercase the domain name, remove www. and .com/.net etc.
+
+To add a second site later, the user just runs `/seo-digest-setup` again — it adds the new site to the existing `sites` dict without touching the other settings.
 
 Also create the directory `~/seo-digest/reports/`.
 
@@ -224,7 +239,7 @@ Print a confirmation summary:
 ```
 ✅ SEO Digest is ready.
 
-Site:         [site_name] ([gsc_property])
+Site:         [site_name] · /seo-digest [site-slug]
 Brand filter: [brand_terms joined by ", "]
 Drop alert:   [drop_threshold]+ positions
 DataForSEO:   [Enabled / Disabled]
