@@ -464,12 +464,6 @@ Only if `config.clickup.enabled` is true AND ClickUp MCP is connected.
 - Name: `📊 SEO Digest — [Mon DD] — [site_name]`
 - Content: full digest
 
-**Create a task:**
-`mcp__clickup__clickup_create_task` in `config.clickup.list_id`
-- Name: `📊 SEO Digest ready — [site_name] — [date]`
-- Description: At a Glance block + This Week's Focus only
-- Due date: today
-
 ---
 
 ## Step 10b — Send ClickUp DM Notification
@@ -512,6 +506,6 @@ If no DM channel is found for the user: skip silently, do not error.
 Show:
 1. Full digest (formatted)
 2. `Saved: ~/seo-digest/reports/YYYY-MM-DD-digest.md`
-3. ClickUp confirmation or "ClickUp not connected — local only."
+3. ClickUp Doc confirmation or "ClickUp not connected — local only."
 4. DM confirmation: `DM sent to [config.clickup_notify.username] on ClickUp.` or skip if not configured.
 5. "Want me to dig into any of these pages? Just name it."
