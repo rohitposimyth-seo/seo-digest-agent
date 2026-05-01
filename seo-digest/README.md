@@ -72,6 +72,36 @@ Quit Claude Code fully (**Cmd+Q** on Mac, **Alt+F4** on Windows) and reopen afte
 
 ---
 
+## Team setup — managing multiple sites
+
+If your team manages multiple sites (e.g. one person owns The Plus Addons, another owns NexterWP), each person installs the same agent but configures only their site during setup. Reports, delivery, and scheduling are completely separate per person.
+
+**Each team member does this once:**
+
+1. **Connect Google Search Console** — claude.ai → Settings → Connectors → Google Search Console → Connect.
+   Your Google account only needs access to the site(s) you manage — not all sites.
+
+2. **Connect ClickUp** (optional) — claude.ai → Settings → Connectors → ClickUp → Connect.
+   Reports will be delivered to your own ClickUp space and your own DM — not shared with others.
+
+3. **Install the agent** — paste the install command above into Claude Code and confirm.
+
+4. **Quit and reopen Claude Code.**
+
+5. **Run `/seo-digest-setup`** — pick only the site you manage. Takes 2 minutes.
+
+6. **Run `/seo-digest`** — your first report runs immediately.
+
+**If you manage only one site:** just run `/seo-digest` with no arguments — it auto-runs for your configured site.
+
+**If you manage multiple sites:** run `/seo-digest theplusaddons` or `/seo-digest nexterwp` to specify which one.
+
+**To add another site later:** run `/seo-digest-setup` again — it adds the new site to your config without touching the first one.
+
+> Your config lives at `~/.claude/seo-digest/config.json` on your machine. It's private — no one else can see your sites, your reports, or your delivery settings.
+
+---
+
 ## How it connects
 
 ### 🔵 Google Search Console (required)
