@@ -109,7 +109,50 @@ Set `clickup.enabled = false`. Continue.
 
 ---
 
-## Step 6 — Drop Threshold
+## Step 6 — ClickUp DM Notification
+
+Only ask this if ClickUp is connected (step 5 succeeded).
+
+Ask:
+
+> "Want me to send you a personal ClickUp DM each time the digest runs? It'll be a short summary — clicks, impressions, and your 3 focus actions for the week.
+> Yes / No"
+
+**If yes:**
+
+Ask:
+> "What's your full name in ClickUp? (e.g. Rohit Bansode)"
+
+Call `mcp__clickup__clickup_find_member_by_name` with their name.
+
+- If found: confirm "Found you — [username]. Got it."
+- If not found: "Couldn't find that name in the workspace. Check it matches exactly what's in ClickUp and re-run setup." Set `clickup_notify.enabled = false` and continue.
+
+Then call `mcp__clickup__clickup_get_chat_channels` with `include_hidden: true`.
+- Filter to type `DM`
+- Find the most recently active DM channel where `creator` matches the user's ID
+- Store that channel's `id` as `clickup_notify.channel_id`
+
+Store:
+```json
+"clickup_notify": {
+  "enabled": true,
+  "username": "[their ClickUp username]",
+  "user_id": [their numeric user ID],
+  "channel_id": "[DM channel id]"
+}
+```
+
+**If no:**
+```json
+"clickup_notify": {
+  "enabled": false
+}
+```
+
+---
+
+## Step 7 — Drop Threshold
 
 Ask:
 
@@ -135,6 +178,12 @@ Write to `~/.claude/seo-digest/config.json`:
     "enabled": true_or_false,
     "list_id": "[list id or null]",
     "space_name": "[space name or null]"
+  },
+  "clickup_notify": {
+    "enabled": true_or_false,
+    "username": "[ClickUp username or null]",
+    "user_id": null_or_numeric_id,
+    "channel_id": "[DM channel id or null]"
   },
   "local_reports_path": "~/seo-digest/reports/",
   "version": "2.0.0",
@@ -180,6 +229,7 @@ Brand filter: [brand_terms joined by ", "]
 Drop alert:   [drop_threshold]+ positions
 DataForSEO:   [Enabled / Disabled]
 Delivery:     [ClickUp — space_name / Local only / ClickUp + Local]
+DM notify:    [ClickUp DM → username / Disabled]
 Schedule:     [Every Monday 9am / Manual only]
 
 Run /seo-digest now to get your first report.
