@@ -472,10 +472,46 @@ Only if `config.clickup.enabled` is true AND ClickUp MCP is connected.
 
 ---
 
+## Step 10b — Send ClickUp DM Notification
+
+Only if `config.clickup_notify.enabled` is true AND ClickUp MCP is connected.
+
+**Find the DM channel:**
+Call `mcp__clickup__clickup_get_chat_channels` with `include_hidden: true`.
+- Filter results to type `DM`
+- Find the most recently active DM channel where `creator` matches `config.clickup_notify.user_id`
+- Use that channel's `id` as the DM channel
+
+**Send the message:**
+Call `mcp__clickup__clickup_send_chat_message` with:
+- `channel_id`: the DM channel id found above
+- `content`: the message below (plain text, no markdown)
+
+Message format:
+```
+📊 SEO Digest is ready — [site_name] — [date]
+
+[Non-brand clicks]: [X] ([+/-X%] vs last week)
+[Total impressions]: [X] ([+/-X%])
+[Avg position]: [X.X] → [X.X]
+
+This week's focus:
+1. [Action 1 — one line]
+2. [Action 2 — one line]
+3. [Action 3 — one line]
+
+Full report in Rohit Docs → SEO Digest doc.
+```
+
+If no DM channel is found for the user: skip silently, do not error.
+
+---
+
 ## Step 11 — Final Response
 
 Show:
 1. Full digest (formatted)
 2. `Saved: ~/seo-digest/reports/YYYY-MM-DD-digest.md`
 3. ClickUp confirmation or "ClickUp not connected — local only."
-4. "Want me to dig into any of these pages? Just name it."
+4. DM confirmation: `DM sent to [config.clickup_notify.username] on ClickUp.` or skip if not configured.
+5. "Want me to dig into any of these pages? Just name it."
