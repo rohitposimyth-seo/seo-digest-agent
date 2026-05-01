@@ -483,36 +483,17 @@ Call `mcp__clickup__clickup_send_chat_message` with:
 
 Message format:
 ```
-📊 SEO Digest is ready — [site_name] — [date]
+📊 SEO Digest — [site_name] — [date]
+Clicks: [X] ([+/-X%]) · Impressions: [X] ([+/-X%]) · Avg pos: [X.X] → [X.X]
 
-AT A GLANCE
-Clicks: [X] ([+/-X%] vs last week)
-Impressions: [X] ([+/-X%])
-Avg position: [X.X] → [X.X]
+🟢 [/slug] — #[prev]→#[curr] · +[delta] clicks
+🟢 [/slug] — #[prev]→#[curr] · +[delta] clicks
+🔴 [/slug] — #[prev]→#[curr] · -[delta] clicks · [diagnosis in 4 words]
+🎯 [/slug] — #[pos] · est +[gain] clicks/week
+⚡ [/slug] — #[pos] · [missed] clicks/week missed on CTR
 
-🟢 WINS
-• [/slug] — #[prev] → #[curr] · +[delta] clicks
-• [/slug] — #[prev] → #[curr] · +[delta] clicks
-• [/slug] — #[prev] → #[curr] · +[delta] clicks
-
-🔴 DROPS
-• [/slug] — #[prev] → #[curr] · -[delta] clicks · [diagnosis in 5 words]
-• [/slug] — #[prev] → #[curr] · -[delta] clicks · [diagnosis in 5 words]
-
-🎯 QUICK WINS
-• [/slug] — #[pos] · est +[gain] clicks/week
-• [/slug] — #[pos] · est +[gain] clicks/week
-• [/slug] — #[pos] · est +[gain] clicks/week
-
-⚡ TOP CTR GAP
-• [/slug] — #[pos] · [ctr]% CTR (should be [exp]%) · [missed] clicks/week missed
-
-THIS WEEK'S FOCUS
-1. [Action 1 — one line]
-2. [Action 2 — one line]
-3. [Action 3 — one line]
-
-Full report → Rohit Docs → SEO Digest doc.
+Focus: [single most important action this week — one line]
+Full report in Rohit Docs → SEO Digest doc.
 ```
 
 If no DM channel is found for the user: skip silently, do not error.
