@@ -32,21 +32,21 @@ Publishes a draft article from this project to WordPress as a Draft, with all SE
 1. **Parses the draft file** - Extracts all metadata from frontmatter
 2. **Converts Markdown to HTML** - Formats content for WordPress
 3. **Creates WordPress draft** - Posts via REST API with status "draft"
-4. **Sets Yoast SEO fields**:
+4. **Sets Rank Math SEO fields** (via standard WP REST API — no plugin required):
    - SEO Title (from Meta Title)
    - Meta Description
-   - Focus Keyphrase (from Target Keyword)
+   - Focus Keyphrase (from Primary Keyword or Target Keyword)
 5. **Assigns taxonomy** - Categories and Tags if specified
 6. **Returns edit URL** - Direct link to edit the post in WordPress
 
 ## Metadata Mapping
 
-| Draft Field | WordPress/Yoast Field |
-|-------------|----------------------|
+| Draft Field | WordPress/Rank Math Field |
+|-------------|--------------------------|
 | H1 Title | Post Title |
-| Meta Title | Yoast SEO Title |
-| Meta Description | Yoast Meta Description + Excerpt |
-| Target Keyword | Yoast Focus Keyphrase |
+| Meta Title | rank_math_title |
+| Meta Description | rank_math_description + Excerpt |
+| Primary Keyword / Target Keyword | rank_math_focus_keyword |
 | URL Slug | Post Slug |
 | Category | Post Categories |
 | Tags | Post Tags |

@@ -1,6 +1,6 @@
 ---
 name: seo-digest
-description: "SEO Digest — pulls Google Search Console data for the past 4 weeks, cross-references with DataForSEO for search volume and keyword difficulty, detects competitor movement on drops, flags SERP feature cannibalization, checks index health, and produces a plain-English Monday morning report. Triggers: seo digest, weekly seo report, gsc digest, search console summary, seo weekly, what happened this week in seo"
+description: "SEO Digest — pulls Google Search Console data for the past 2 weeks, cross-references with DataForSEO for search volume and keyword difficulty, detects competitor movement on drops, flags SERP feature cannibalization, checks index health, and produces a plain-English Monday morning report. Triggers: seo digest, weekly seo report, gsc digest, search console summary, seo weekly, what happened this week in seo"
 metadata:
   version: 2.0.0
   author: SEO Digest by POSIMYTH
@@ -60,8 +60,6 @@ GSC data has a 2-3 day lag. Use D = today.
 **For 7d (default):**
 - Week 1 (current):  D-10 → D-3
 - Week 2 (prior):    D-17 → D-10
-- Week 3:            D-24 → D-17
-- Week 4:            D-31 → D-24
 
 **For 14d:**
 - Period 1 (current): D-17 → D-3
@@ -77,14 +75,12 @@ Always state the exact date range at the top of the report.
 
 ## Step 3 — Pull GSC Data
 
-**Fire all 7 calls simultaneously in a single parallel batch.** Do not wait for one before starting the next — they are fully independent.
+**Fire all 5 calls simultaneously in a single parallel batch.** Do not wait for one before starting the next — they are fully independent.
 
 | Call | Dimensions | Dates | rowLimit |
 |------|-----------|-------|----------|
 | A — Pages W1 | `["page"]` | Week 1 | **100** |
 | B — Pages W2 | `["page"]` | Week 2 | **100** |
-| C — Pages W3 | `["page"]` | Week 3 | **100** |
-| D — Pages W4 | `["page"]` | Week 4 | **100** |
 | E — Queries W1 | `["query"]` | Week 1 | **250** |
 | F — Queries W2 | `["query"]` | Week 2 | **250** |
 | G — Query+Page W1 | `["query","page"]` | Week 1 | **250** |
@@ -104,7 +100,7 @@ python3 ~/seomachine/scripts/seo_digest_analysis.py \
   --minutes 30
 ```
 
-The tool-results directory is shown in the saved file paths. The script auto-detects the 7 most recent GSC files, classifies them by type, computes all signals, and prints them. Use that output to write the digest — skip Steps 4–6 and go straight to Step 8.
+The tool-results directory is shown in the saved file paths. The script auto-detects the 5 most recent GSC files, classifies them by type, computes all signals, and prints them. Use that output to write the digest — skip Steps 4–6 and go straight to Step 8.
 
 Store all results in memory. Move to Step 4.
 
@@ -140,18 +136,13 @@ This map is used in Steps 6 and 7 for DataForSEO enrichment.
 
 ## Step 6 — Compute Core Signals
 
-Join Calls A, B, C, D by page URL to get 4-week data per page. Compute:
+Join Calls A and B by page URL to get 2-week data per page. Compute:
 
-- `position_w1`, `position_w2`, `position_w3`, `position_w4`
-- `clicks_w1`, `clicks_w2`, `clicks_w3`, `clicks_w4`
+- `position_w1`, `position_w2`
+- `clicks_w1`, `clicks_w2`
 - `impressions_w1`
 - `position_delta` = position_w2 − position_w1 (positive = improved, negative = dropped)
 - `clicks_delta` = clicks_w1 − clicks_w2
-- `trend` = direction over 4 weeks:
-  - "improving" if position decreased (got better) across W4→W3→W2→W1
-  - "declining" if position increased (got worse) across W4→W3→W2→W1
-  - "volatile" if mixed
-  - "stable" if < 2 position change across all 4 weeks
 
 **CTR benchmark table** (use for expected CTR by position):
 #1=27%, #2=15%, #3=10%, #4=7%, #5=5%, #6=4%, #7=3%, #8=2.5%, #9=2%, #10=1.5%, #11-15=1%, #16-20=0.5%
@@ -167,8 +158,6 @@ Join Calls A, B, C, D by page URL to get 4-week data per page. Compute:
 Pages where `position_delta ≥ 3` AND `impressions_w1 ≥ 100`
 OR `clicks_delta ≥ 15`
 
-Annotate each win with its `trend` label. A win tagged "improving" for 4 weeks is more significant than a one-week bounce.
-
 Sort by `clicks_delta` descending. Keep top 5.
 
 ---
@@ -176,8 +165,6 @@ Sort by `clicks_delta` descending. Keep top 5.
 ### Signal B — Drops
 Pages where `position_delta ≤ -config.drop_threshold` AND `impressions_w1 ≥ 100`
 OR `clicks_delta ≤ -15`
-
-Annotate with `trend`. A "declining" trend means this has been happening for weeks — more urgent than a single-week blip ("volatile").
 
 Sort by `clicks_delta` ascending. Keep top 5 for enrichment.
 
@@ -337,9 +324,8 @@ Avg position: [X.X] → [X.X] ([improved/held/declined])
 🟢 WINS — PAGES THAT CLIMBED
 
 [For each win:]
-• [/page-slug] — #[prev] → #[curr] · [clicks_w1] clicks (+[delta] vs last week) · [trend label]
+• [/page-slug] — #[prev] → #[curr] · [clicks_w1] clicks (+[delta] vs last week)
 
-[Trend context: if "improving for 4 weeks" add: "Consistent climb — this is real momentum, not a blip."]
 [If no wins: "No major gains this week — rankings held steady."]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -347,7 +333,7 @@ Avg position: [X.X] → [X.X] ([improved/held/declined])
 🔴 WATCH LIST — PAGES THAT DROPPED
 
 [For each drop:]
-• [/page-slug] — #[prev] → #[curr] · down [abs(delta)] clicks · [trend label]
+• [/page-slug] — #[prev] → #[curr] · down [abs(delta)] clicks
 
   [If index issue found:]
   ⚠️ INDEX PROBLEM: [specific issue from GSC inspect — fix this before anything else]
@@ -358,8 +344,6 @@ Avg position: [X.X] → [X.X] ([improved/held/declined])
   [If competitor took spot:]
   👤 Who took the spot: [domain] (now at #[pos]) — [diagnosis label]
   → Fix: [one sentence on what to do based on diagnosis]
-
-[Trend context: if "declining for 3+ weeks" add: "This has been dropping consistently — not a one-week blip. Needs attention this week."]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -442,7 +426,6 @@ Run /seo-digest anytime · /seo-digest-setup to change settings
 - Positions as `#7` (never "position 7.3") — round to nearest whole
 - Always show absolute numbers alongside percentages
 - Never say "improve your content" — say what to add, change, or remove
-- Trend label on every win and drop: "improving 4 weeks" / "declining 3 weeks" / "volatile" / "stable"
 - If a page has an index issue: that is the only recommendation for that page — don't also suggest a content refresh
 - SERP feature cannibalization means content work won't recover the ranking — say so plainly
 - Missed clicks and estimated gains must be real computed numbers, never rough guesses

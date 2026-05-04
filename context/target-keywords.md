@@ -1,375 +1,232 @@
-# Target Keywords & Topic Clusters
+# Target Keywords & Topic Clusters — Nexter WP
 
-This document organizes Castos's target keywords by topic cluster for strategic content planning and SEO optimization.
-
-## Instructions
-Fill in this template with your target keywords organized by topic cluster. Update regularly based on keyword research and content performance.
+This document organizes Nexter WP's target keywords by cluster, funnel stage, and content type. Use this alongside `seo-guidelines.md` for every research, writing, and optimization task.
 
 ---
 
-## Topic Cluster Structure
+## 🏷️ Brand Keywords — Always Use Exactly As Written
 
-Each topic cluster should have:
-- **Pillar Keyword**: Main, high-volume keyword (typically competitive)
-- **Cluster Keywords**: 5-10 related keywords (subtopics)
-- **Long-Tail Keywords**: 10-15 specific, lower-volume phrases
-- **Search Intent**: What users want (informational, commercial, transactional)
-
----
-
-## Cluster 1: Podcast Hosting
-
-### Pillar Keyword
-- **Keyword**: podcast hosting
-- **Search Volume**: [monthly searches]
-- **Difficulty**: [competition level]
-- **Intent**: Commercial
-- **Current Ranking**: [position if known]
-- **Pillar Content URL**: [URL of main guide]
-
-### Cluster Keywords (Subtopics)
-1. **best podcast hosting**
-   - Volume: [searches]
-   - Difficulty: [level]
-   - Content: [URL if exists, or "Not yet created"]
-
-2. **podcast hosting platform**
-   - Volume: [searches]
-   - Difficulty: [level]
-   - Content: [URL or status]
-
-3. **podcast hosting comparison**
-   - Volume: [searches]
-   - Difficulty: [level]
-   - Content: [URL or status]
-
-4. **free podcast hosting**
-   - Volume: [searches]
-   - Difficulty: [level]
-   - Content: [URL or status]
-
-5. **podcast hosting pricing**
-   - Volume: [searches]
-   - Difficulty: [level]
-   - Content: [URL or status]
-
-[Add 5-10 cluster keywords total]
-
-### Long-Tail Keywords
-- how to choose a podcast host
-- podcast hosting for beginners
-- podcast hosting with unlimited bandwidth
-- podcast hosting that includes a website
-- difference between podcast hosting and website hosting
-- what to look for in a podcast host
-- podcast hosting for multiple shows
-- [Add 10-15 long-tail variations]
-
-### Related Questions (People Also Ask)
-- What is podcast hosting?
-- Do I need podcast hosting?
-- How much does podcast hosting cost?
-- Can I host my podcast for free?
-- [Add questions from PAA boxes]
+- Nexter WP / NexterWP
+- Nexter Theme
+- Nexter Blocks
+- Nexter Extension
+- POSIMYTH
 
 ---
 
-## Cluster 2: Podcast Analytics
+## 🔑 Core Product Keywords
 
-### Pillar Keyword
-- **Keyword**: podcast analytics
-- **Search Volume**: [monthly searches]
-- **Difficulty**: [competition level]
-- **Intent**: Informational
-- **Current Ranking**: [position if known]
-- **Pillar Content URL**: [URL or "To create"]
-
-### Cluster Keywords (Subtopics)
-1. **podcast metrics**
-2. **podcast download statistics**
-3. **podcast listener data**
-4. **podcast performance tracking**
-5. **podcast growth metrics**
-[Continue with 5-10 cluster keywords]
-
-### Long-Tail Keywords
-- how to track podcast analytics
-- understanding podcast download numbers
-- most important podcast metrics
-- how to measure podcast success
-- podcast analytics tools
-[Add 10-15 long-tail variations]
-
-### Related Questions
-[Add PAA questions]
+- Lightest WordPress theme
+- Fastest WordPress starter theme
+- jQuery-free WordPress theme
+- WordPress Gutenberg blocks
+- WordPress blocks plugin
+- WordPress theme for page builders
+- FSE WordPress theme / Full site editing WordPress theme
+- WordPress starter theme
 
 ---
 
-## Cluster 3: Podcast Growth
+## 💰 High-Intent Commercial Keywords
 
-### Pillar Keyword
-- **Keyword**: grow podcast audience
-- **Search Volume**: [monthly searches]
-- **Difficulty**: [competition level]
-- **Intent**: Informational
-- **Current Ranking**: [position]
-- **Pillar Content URL**: [URL or status]
-
-### Cluster Keywords
-1. **podcast growth strategies**
-2. **increase podcast downloads**
-3. **podcast marketing**
-4. **podcast promotion**
-5. **podcast audience development**
-[Continue with cluster keywords]
-
-### Long-Tail Keywords
-- how to get more podcast listeners
-- promote your podcast free
-- grow podcast audience fast
-- podcast growth tips for beginners
-[Add long-tail variations]
-
-### Related Questions
-[Add PAA questions]
+- Best WordPress theme
+- Best Gutenberg blocks plugin
+- Fastest loading WordPress theme
+- Lightweight WordPress theme
+- WordPress blocks plugin free
+- WordPress theme builder
+- WordPress theme for agencies
+- WordPress theme for WooCommerce
 
 ---
 
-## Cluster 4: Podcast Monetization
+## 🆓 Free WordPress Theme Keywords (High Traffic — Priority Cluster)
 
-### Pillar Keyword
-- **Keyword**: podcast monetization
-- **Search Volume**: [monthly searches]
-- **Difficulty**: [competition level]
-- **Intent**: Commercial/Informational
-- **Current Ranking**: [position]
-- **Pillar Content URL**: [URL or status]
+- Free WordPress themes
+- Best free WordPress themes / Best free WordPress themes 2026
+- Free WordPress themes for business / blogs / portfolio / WooCommerce
+- Free WordPress starter themes
+- Free lightweight WordPress theme
+- Free Gutenberg WordPress theme / Free FSE WordPress theme
+- Download free WordPress theme
+- Best free WordPress themes for beginners / agencies
+- Free WordPress theme no coding
 
-### Cluster Keywords
-1. **how to monetize a podcast**
-2. **podcast advertising**
-3. **podcast sponsorships**
-4. **make money podcasting**
-5. **podcast revenue streams**
-[Continue]
-
-### Long-Tail Keywords
-[Add 10-15 variations]
-
-### Related Questions
-[Add PAA questions]
+**CTA for free theme content — always link to both:**
+- https://wordpress.org/themes/nexter/ (cold/general audiences)
+- https://nexterwp.com/download-nexter-free/#download-nexter (warm/on-site audiences)
 
 ---
 
-## Cluster 5: Starting a Podcast
+## 🗂️ Keyword Clusters by Intent & Funnel Stage
 
-### Pillar Keyword
-- **Keyword**: how to start a podcast
-- **Search Volume**: [monthly searches]
-- **Difficulty**: [competition level]
-- **Intent**: Informational
-- **Current Ranking**: [position]
-- **Pillar Content URL**: [URL or status]
+### 🔴 Cluster 1 — WordPress Theme Core (BOFU — High commercial intent)
 
-### Cluster Keywords
-1. **podcast equipment**
-2. **podcast recording software**
-3. **podcast editing**
-4. **podcast launch checklist**
-5. **podcast setup**
-[Continue]
-
-### Long-Tail Keywords
-[Add variations]
-
-### Related Questions
-[Add PAA questions]
+| Keyword | Priority |
+|---|---|
+| Best WordPress theme | 🔴 High |
+| Fastest / lightest WordPress theme | 🔴 High |
+| Best WordPress theme for speed / agencies / WooCommerce | 🔴 High |
+| WordPress starter theme | 🟡 Medium |
+| jQuery-free WordPress theme | 🟡 Medium |
+| FSE / Full site editing WordPress theme | 🟡 Medium |
 
 ---
 
-## Cluster 6: [Additional Cluster]
+### 🔴 Cluster 2 — Gutenberg Blocks (BOFU — Core product)
 
-[Follow same format for:]
-- Podcast SEO
-- Podcast Distribution
-- Podcast Equipment
-- Podcast Editing
-- Podcast Formats
-- Private Podcasting
-- Podcast for Business
-- etc.
-
----
-
-## Seasonal/Trending Keywords
-
-### Q1 Keywords (Jan-Mar)
-- New year podcast goals
-- Podcast trends 2025
-- [Add seasonal opportunities]
-
-### Q2 Keywords (Apr-Jun)
-[Add seasonal keywords]
-
-### Q3 Keywords (Jul-Sep)
-[Add seasonal keywords]
-
-### Q4 Keywords (Oct-Dec)
-[Add seasonal keywords]
+| Keyword | Priority |
+|---|---|
+| Best WordPress Gutenberg blocks | 🔴 High |
+| Best Gutenberg blocks plugin (free) | 🔴 High |
+| Free WordPress blocks plugin | 🔴 High |
+| WordPress blocks plugin | 🔴 High |
+| Advanced Gutenberg blocks | 🟡 Medium |
+| Gutenberg blocks for WooCommerce | 🟡 Medium |
+| WordPress block editor plugins | 🟡 Medium |
 
 ---
 
-## Competitor Keyword Gaps
+### 🔴 Cluster 3 — Competitor Comparisons (MOFU — High converting)
 
-Track keywords where competitors rank but Castos doesn't:
+| Keyword | Priority |
+|---|---|
+| Nexter vs Astra / Kadence / GeneratePress / OceanWP | 🔴 High |
+| Astra alternative / GeneratePress alternative | 🔴 High |
+| Kadence WP alternative / OceanWP alternative | 🔴 High |
+| Best Astra alternative 2026 | 🔴 High |
+| Astra vs Kadence / Astra vs GeneratePress | 🟡 Medium |
+| Lightweight Astra alternative | 🟡 Medium |
 
-### Competitor: [Name]
-- **Keyword**: [keyword they rank for]
-  - Their Position: [rank]
-  - Castos Position: [rank or "Not ranking"]
-  - Opportunity: [High/Medium/Low]
-  - Action: [Create content, optimize existing, etc.]
-
-[Add more competitors and gaps]
-
----
-
-## Keyword Opportunity Pipeline
-
-### High Priority (Create Soon)
-Keywords with high volume, achievable difficulty, strong business value:
-
-1. **Keyword**: [keyword]
-   - Volume: [searches]
-   - Difficulty: [score]
-   - Intent: [type]
-   - Why Priority: [strategic reason]
-   - Action: [Create pillar content / cluster article / etc.]
-
-[List 5-10 high-priority keywords]
-
-### Medium Priority (Next Quarter)
-[List keywords to target in next 3 months]
-
-### Low Priority (Future Consideration)
-[List keywords for future content planning]
+**Rule**: All comparison content must end with a "Choose X if... Choose Nexter if..." framework. Never mock competitors — acknowledge their strengths first.
 
 ---
 
-## Keyword Tracking & Performance
+### 🟡 Cluster 4 — WordPress Performance & Speed (TOFU → MOFU)
 
-### Top Performing Keywords
-Keywords where Castos ranks in positions 1-10:
-
-1. **Keyword**: [keyword]
-   - Position: [current rank]
-   - Volume: [searches]
-   - URL: [ranking page]
-   - Trend: [↑ Rising / → Stable / ↓ Declining]
-
-[List current winners]
-
-### Keywords to Improve
-Keywords ranking 11-20 (page 2) with opportunity:
-
-1. **Keyword**: [keyword]
-   - Position: [current rank]
-   - Volume: [searches]
-   - URL: [ranking page]
-   - Action Needed: [Update content, build links, etc.]
-
-[List improvement opportunities]
+| Keyword | Priority |
+|---|---|
+| How to speed up WordPress | 🔴 High |
+| Fastest loading WordPress theme | 🔴 High |
+| WordPress performance optimization | 🟡 Medium |
+| WordPress Core Web Vitals / LCP optimization | 🟡 Medium |
+| Reduce WordPress page load time | 🟡 Medium |
+| Improve WordPress PageSpeed score | 🟡 Medium |
+| Disable jQuery WordPress / WordPress without jQuery | 🟡 Medium |
+| WordPress render blocking resources | 🟡 Medium |
 
 ---
 
-## Keyword Cannibalization Check
+### 🟡 Cluster 5 — WordPress Errors & Fixes (TOFU — Proven traffic drivers)
 
-Track multiple pages targeting same/similar keywords:
-
-### Potential Cannibalization Issues
-
-**Keyword**: [keyword]
-- Page 1: [URL] - Position [rank]
-- Page 2: [URL] - Position [rank]
-- **Issue**: Both pages competing for same keyword
-- **Solution**: [Consolidate, differentiate, redirect, etc.]
-
-[Monitor and document conflicts]
-
----
-
-## LSI & Semantic Keywords
-
-Common related terms to include across podcasting content:
-
-### Podcast Industry Terms
-- RSS feed
-- podcast directory
-- podcast app
-- podcast player
-- episode
-- show notes
-- audio content
-- podcast network
-[Add more]
-
-### Podcast Creation Terms
-- recording
-- editing
-- post-production
-- audio quality
-- microphone
-- podcast equipment
-[Add more]
-
-### Podcast Growth Terms
-- downloads
-- listeners
-- audience
-- subscribers
-- engagement
-- retention
-[Add more]
+| Keyword | Priority |
+|---|---|
+| How to fix [WordPress error] | 🔴 High |
+| Fix blurry images WordPress | 🔴 High |
+| WordPress 400 bad request error | 🔴 High |
+| WordPress can't add page to menu | 🔴 High |
+| WordPress white screen of death | 🟡 Medium |
+| WordPress 500 internal server error | 🟡 Medium |
+| WordPress login page not working | 🟡 Medium |
+| WordPress images not loading | 🟡 Medium |
+| WordPress plugin conflict | 🟡 Medium |
 
 ---
 
-## Usage Guidelines
+### 🟢 Cluster 6 — WordPress How-To & Tutorials (TOFU — Builds topical authority)
 
-### When Writing New Content
-1. Check which cluster the topic belongs to
-2. Target the appropriate cluster or long-tail keyword
-3. Reference pillar content in that cluster
-4. Include LSI keywords naturally
-5. Link to related cluster articles
-
-### When Optimizing Existing Content
-1. Verify content targets the right keyword
-2. Check for cannibalization with other pages
-3. Ensure keyword appears in critical locations
-4. Update if search intent has shifted
-5. Add internal links to/from related cluster content
-
-### When Planning Content Calendar
-1. Review keyword opportunity pipeline
-2. Prioritize high-value, achievable keywords
-3. Build out topic clusters systematically
-4. Balance pillar content with cluster articles
-5. Track keyword performance over time
+| Keyword | Priority |
+|---|---|
+| How to monetize WordPress blog | 🔴 High |
+| How to add Gutenberg to WooCommerce | 🟡 Medium |
+| How to add dark mode / countdown timer / popup / mega menu to WordPress | 🟡 Medium |
+| How to add read more button WordPress | 🟡 Medium |
+| How to create WordPress header | 🟡 Medium |
+| How to add table of contents WordPress | 🟡 Medium |
+| How to white label WordPress theme | 🟡 Medium |
+| How to add before after slider / social feed WordPress | 🟡 Medium |
 
 ---
 
-## Maintenance
+### 🟢 Cluster 7 — Resource Lists (TOFU — Brand awareness)
 
-**Last Updated**: [Date]
-**Next Review**: [Date - quarterly recommended]
-
-**Regular Updates**:
-- Add new keyword opportunities monthly
-- Track ranking changes monthly
-- Update volumes/difficulty quarterly
-- Review competitor gaps quarterly
-- Refine clusters based on performance
+| Keyword | Priority |
+|---|---|
+| Best websites to download fonts | 🔴 High |
+| Best free fonts for websites | 🟡 Medium |
+| Best WordPress plugins for agencies / WooCommerce | 🟡 Medium |
+| Best Gutenberg plugins 2026 | 🟡 Medium |
+| Best WordPress security / image optimization plugins | 🟡 Medium |
+| Best WordPress starter templates | 🟡 Medium |
 
 ---
 
-**Note**: This is a living document. As you conduct keyword research, track performance, and identify new opportunities, update this file to keep your SEO strategy aligned with your content creation.
+### 🟢 Cluster 8 — Specific Block Feature Keywords (BOFU — Long tail, low competition)
+
+| Keyword | Target Page |
+|---|---|
+| WordPress countdown timer block | /nexter-blocks/blocks/wordpress-countdown-timer/ |
+| WordPress dark mode block | /nexter-blocks/blocks/wordpress-dark-mode-switcher/ |
+| WordPress before after image slider | /nexter-blocks/blocks/wordpress-before-after-image-comparison-slider/ |
+| WordPress lottie animation block | /nexter-blocks/blocks/wordpress-lottiefiles-animations/ |
+| WordPress pricing table block | /nexter-blocks/blocks/wordpress-pricing-table/ |
+| WordPress accordion block Gutenberg | /nexter-blocks/blocks/wordpress-accordion-toggle/ |
+| WordPress table of contents block | /nexter-blocks/blocks/wordpress-table-of-contents/ |
+| WordPress popup builder Gutenberg | /nexter-blocks/builder/wordpress-popup-builder/ |
+| WordPress mega menu Gutenberg | /nexter-blocks/builder/wordpress-horizontal-mega-menu/ |
+| WordPress form builder Gutenberg | /nexter-blocks/builder/wordpress-form-builder/ |
+| WordPress post grid block | /nexter-blocks/listing/wordpress-post-grid/ |
+| WordPress image gallery block | /nexter-blocks/listing/wordpress-image-gallery/ |
+| WordPress testimonials block | /nexter-blocks/listing/wordpress-testimonial-reviews/ |
+
+---
+
+## 🗺️ Topic Cluster / Content Pillar Map
+
+```
+PILLAR 1: WordPress Themes
+├── Best free WordPress themes 2026 (cluster hub)
+├── Fastest WordPress themes compared
+├── Lightweight WordPress themes guide
+├── FSE / Full Site Editing themes
+└── Nexter vs [each competitor]
+
+PILLAR 2: Gutenberg Blocks
+├── Best Gutenberg blocks plugins (cluster hub)
+├── Free Gutenberg blocks
+├── Gutenberg vs Elementor
+└── [Individual block how-to posts]
+
+PILLAR 3: WordPress Performance
+├── How to speed up WordPress (cluster hub)
+├── Core Web Vitals WordPress guide
+├── Disable jQuery in WordPress
+└── WordPress image optimization guide
+
+PILLAR 4: WordPress Fixes & Errors
+├── WordPress troubleshooting guide (cluster hub)
+└── [Individual fix posts — proven traffic drivers]
+
+PILLAR 5: WordPress How-To
+├── WordPress beginner's guide (cluster hub)
+└── [Individual tutorial posts per Nexter block/feature]
+```
+
+---
+
+## 📋 Keyword Types to Target
+
+1. **Comparison** — "Nexter vs Astra", "OceanWP alternative"
+2. **Problem/fix** — "how to fix [WordPress error]", "WordPress [X] not working"
+3. **Best-of lists** — "best WordPress themes for [niche]", "best Gutenberg blocks plugins"
+4. **How-to** — "how to [do X] in WordPress", "how to add [feature] to WordPress"
+5. **Resource** — "free WordPress [X]", "best [tools] for WordPress"
+6. **Feature-specific** — "WordPress dark mode block", "WordPress countdown timer block"
+7. **Free theme** — "free WordPress themes", "best free WordPress themes 2026"
+
+## 🚫 Keyword Types to Avoid
+
+- Topics with no WordPress connection and no strong content angle
+- Overly broad keywords with no buyer intent (e.g., just "website")
+- YMYL topics requiring medical/legal/financial expertise
+- Anything requiring misleading or clickbait content

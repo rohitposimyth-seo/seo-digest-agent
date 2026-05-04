@@ -48,7 +48,7 @@ This prevents the "AI knows everything" trap that produces generic content match
    ```
 
 2. **Analyze Top 5 Ranking Articles**
-   For each top-ranking article, use WebFetch and document:
+   For each top-ranking article, use WebFetch **always with `.md` suffix** (e.g., `https://example.com/post.md`) — saves 70–80% tokens. For POSIMYTH-owned URLs this is mandatory; for external sites try `.md` first and fall back to HTML only if it fails. Document:
 
    | Element | What to Capture |
    |---------|-----------------|

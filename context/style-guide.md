@@ -1,419 +1,545 @@
-# Castos Style Guide
+# Style Guide — Nexter WP (nexterwp.com)
 
-This guide defines writing conventions, formatting standards, and editorial guidelines for all Castos content.
-
-## Instructions
-Fill in this template with Castos-specific style preferences. Update as the style guide evolves.
+Formatting, structure, and presentation rules for all content on nexterwp.com. SEO Machine must follow this guide for every article — from post length and heading usage to CTA placement and list formatting.
 
 ---
 
-## Grammar & Mechanics
+## 1. 📏 Post Length Rules
 
-### Capitalization
+Every content type has a minimum and target word count. Never publish below the minimum. Never pad content to hit a number — quality over length always.
 
-**Headlines & Subheadings**:
-- [ ] Title Case (Capitalize Major Words)
-- [ ] Sentence case (Only capitalize first word)
-- **Decision**: [Choose one and document here]
+| Content Type | Minimum | Target | Notes |
+|---|---|---|---|
+| Comparison post (X vs Y) | 1,500 | 2,000–3,000 | Needs feature table + FAQ |
+| How-to tutorial | 1,000 | 1,500–2,500 | Needs numbered steps + screenshots |
+| List / resource post | 1,200 | 1,800–2,500 | Each item needs 2–4 sentences min |
+| Error fix post | 800 | 1,000–1,500 | Direct fixes only — no padding |
+| Product feature post | 1,000 | 1,500–2,000 | Real use cases required |
+| Update / changelog post | 400 | 600–900 | Concise — list new features clearly |
 
-**Product Names**:
-- Castos: [Always capitalized]
-- Seriously Simple Podcasting: [Capitalization style]
-- [Other Castos products]: [Style]
-
-**Industry Terms**:
-- podcast / Podcast: [Choose one]
-- podcaster / Podcaster: [Choose one]
-- RSS / rss: [RSS (always caps)]
-- [Add other common terms]
-
-### Numbers
-
-**When to Spell Out**:
-- Spell out: One through nine
-- Use numerals: 10 and above
-- Exceptions:
-  - Percentages: Always use numerals (5%, 50%)
-  - Money: Always use numerals ($5, $500)
-  - Measurements: Always use numerals (5 GB, 50 MB)
-  - Lists/stats: Always use numerals for scannability
-
-**Large Numbers**:
-- 1,000+ (use comma)
-- 1 million (spell out million, billion, etc.)
-- $5,000 or $5K? [Choose convention]
-
-### Punctuation
-
-**Oxford Comma**:
-- [ ] Yes (A, B, and C)
-- [ ] No (A, B and C)
-- **Decision**: [Choose and document]
-
-**Em Dashes**:
-- Style: — (em dash, no spaces) or - - (hyphens with spaces)
-- Usage: For parenthetical statements or emphasis
-- Example: "Podcast analytics—when used correctly—drive better content decisions."
-
-**Quotation Marks**:
-- "Straight quotes" or "Curly quotes"?
-- **Decision**: [Choose one]
-
-**Ellipses**:
-- Three dots: ...
-- Spacing: no spaces before or after
-- Use sparingly: Primarily for omitted text in quotes
-
-### Abbreviations & Acronyms
-
-**First Use**:
-- Spell out on first use, acronym in parentheses
-- Example: "Really Simple Syndication (RSS) feeds distribute..."
-- Exceptions for universally known: SEO, URL, CTA
-
-**Common Podcasting Acronyms**:
-- RSS: Really Simple Syndication
-- DAI: Dynamic Ad Insertion
-- SEO: Search Engine Optimization
-- IAB: Interactive Advertising Bureau
-- [Add others as needed]
-
-**Latin Abbreviations**:
-- e.g. (for example): [Use or avoid?]
-- i.e. (that is): [Use or avoid?]
-- etc. (and so forth): [Use or avoid?]
-- **Decision**: [Generally avoid in favor of plain English]
+**Hard rule**: Never publish under 800 words. Under 800 = thin content = Google penalty risk.
 
 ---
 
-## Word Choice & Usage
+## 2. 🏗️ Article Structure — Full Template
 
-### Preferred Terms
+Every post must follow this exact order. Do not rearrange sections.
 
-**Say This** → **Not That**:
-- podcast creators → podcasters
-- podcast hosting → podcast storage
-- listeners → subscribers
-- audio quality → sound quality
-- show notes → episode notes / shownotes
-- podcast episode → podcast show (episode is unit, show is series)
-- analytics → stats
-- monetize → monetise (US spelling)
-- [Add Castos-specific preferences]
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Featured Image]
+[Category Tag]  ← e.g. "Comparison", "How-To", "WordPress Tips"
+[H1 — Article Title]
+[Meta line: Updated On: DATE | By: Editorial Team | X min read]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-### Words to Avoid
-- Avoid jargon without explanation
-- Avoid "very", "really", "actually" (usually unnecessary)
-- Avoid passive constructions when active is clearer
-- Avoid "click here" or "read more" (use descriptive links)
-- [Add other words/phrases to avoid]
+[INTRO — 2 to 3 short paragraphs]
+  └─ Para 1: Validate the reader's problem / confirm the topic
+  └─ Para 2: Why it matters / what's at stake
+  └─ Para 3: What this article covers + what they'll achieve
 
-### Inclusive Language
-- Use gender-neutral language ("they" instead of "he/she")
-- "Podcast creator" or "podcaster" instead of gendered terms
-- Avoid idioms that may not translate globally
-- Be mindful of accessibility in descriptions
+[TABLE OF CONTENTS] ← DO NOT WRITE THIS — it is auto-generated by the site. Never include a manual TOC in any draft or rewrite.
 
----
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[H2 — Main Section 1]
+  [H3 — Sub-section if needed]
+  [Content]
+  [Image / Screenshot]
 
-## Formatting Standards
+[H2 — Main Section 2]
+  ...
 
-### Text Formatting
+[Mid-Post Nexter CTA] ← Natural product mention, 1–3 sentences
 
-**Bold**:
-- Use for: Key concepts, important takeaways, emphasis
-- Don't overuse: If everything is bold, nothing stands out
-- Example: "**Keyword density** should be 1-2% for optimal results."
+[H2 — Main Section 3+]
+  ...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**Italics**:
-- Use for: Emphasis (sparingly), titles of works, foreign phrases
-- Example: "The term *podcast* combines 'iPod' and 'broadcast'."
+[H2 — Wrapping Up]
+  └─ 2–3 sentences summarising key takeaway
+  └─ Soft Nexter CTA with link to pricing or free download
 
-**Underline**:
-- Generally avoid (reserve for links)
+[EMAIL SUBSCRIBE CTA]
+  └─ Heading + 1 line only
 
-**ALL CAPS**:
-- Avoid except for standard acronyms (RSS, SEO, URL)
+[H2 — FAQs] ← Comparison & how-to posts only
+  [H3 — Question 1?]
+  [Answer: 40–80 words]
+  [H3 — Question 2?]
+  ...
 
-### Lists
-
-**Bulleted Lists**:
-- Use for: Non-sequential items, features, benefits
-- Capitalization: [Sentence case or Title Case?]
-- Punctuation: [Period at end of each item or no punctuation?]
-- **Decision**:
-  - Capitalize first word
-  - Period if complete sentence, no period if fragment
-  - Parallel structure (all sentences or all fragments)
-
-**Numbered Lists**:
-- Use for: Sequential steps, rankings, ordered priorities
-- Format: 1. 2. 3. (with period after number)
-- Same capitalization and punctuation rules as bullets
-
-**Nested Lists**:
-- Maximum 2 levels deep for readability
-- Use different markers for sub-items
-
-### Links
-
-**Anchor Text**:
-- Descriptive (tell reader where they're going)
-- Keyword-rich when possible
-- 2-5 words typically
-- ✅ "Learn more about podcast SEO"
-- ❌ "Click here"
-
-**Link Formatting**:
-- Color: [Default blue or Castos brand color?]
-- Underline: [Yes/No]
-- Open in new tab: [Only for external links]
-
-### Code & Technical Elements
-
-**Inline Code**:
-- Use backticks for: URLs, file names, code snippets
-- Example: "Your RSS feed URL is `https://feeds.castos.com/...`"
-
-**Code Blocks**:
-- Use for: Multi-line code, configuration examples
-- Include language identifier for syntax highlighting
-
-### Callout Boxes / Asides
-
-**When to Use**:
-- Important notes or warnings
-- Pro tips or expert insights
-- Key takeaways or summaries
-
-**Format**:
-- [Define how to format: blockquote, box, highlighted section?]
-- Example style to be determined
+[RELATED POSTS block]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ---
 
-## Content Structure
+## 3. 🔤 Heading Usage Rules (H1 / H2 / H3 / H4)
 
-### Article Introduction
-**Standard Structure** (150-250 words):
-1. **Hook** (1-2 sentences): Grab attention with question, statistic, or bold statement
-2. **Problem** (2-3 sentences): What challenge or question does this address?
-3. **Promise** (2-3 sentences): What will reader learn/achieve?
-4. **Credibility** (optional, 1-2 sentences): Why trust this source?
+### H1 — Article Title
+- One per page — never more
+- Must contain the primary keyword
+- Should closely mirror the title tag (can be slightly longer)
+- Never use H1 anywhere else in the article body
+- ✅ `# How to Fix Blurry Images in WordPress (5 Methods)`
+- ❌ `# Welcome to Our Guide`
 
-**Keyword Placement**:
-- Must include primary keyword in first 100 words
-- Natural integration, not forced
+### H2 — Main Sections
+- Use for every major topic section in the article
+- Minimum 2 per article, no hard maximum
+- Include secondary or related keywords where natural — never forced
+- Each H2 must introduce a distinct topic or step
+- Keep H2s parallel in structure within the same article
 
-### Section Length
-- **Minimum**: 150 words per section
-- **Maximum**: 500 words per section (break into subsections if longer)
-- **Ideal**: 250-350 words per main section
+**Good H2 patterns by content type:**
 
-### Conclusion
-**Standard Structure** (150-250 words):
-1. **Recap** (3-5 bullet points or paragraph): Key takeaways
-2. **Action** (1-2 sentences): What should reader do next?
-3. **CTA** (1-2 sentences): Call-to-action (trial, resource, related content)
-4. **Forward-looking** (optional, 1 sentence): Encouraging final thought
+Comparison posts:
+```
+## What is [Tool A]?
+## What is [Tool B]?
+## [Tool A] vs [Tool B]: 5 Key Differences
+## Which One Should You Choose?
+## Wrapping Up
+## FAQs
+```
 
----
+How-to posts:
+```
+## What You'll Need Before Starting
+## Step 1: [Action]
+## Step 2: [Action]
+## Step 3: [Action]
+## Common Issues & Fixes
+## Wrapping Up
+## FAQs
+```
 
-## SEO-Specific Style
+List posts:
+```
+## 1. [Item Name]
+## 2. [Item Name]
+...
+## Which One is Best for You?
+## Wrapping Up
+```
 
-### Meta Titles
-- 50-60 characters including spaces
-- Include primary keyword
-- Include "| Castos" if space allows
-- No ending punctuation
+Error fix posts:
+```
+## What Causes [Error Name]?
+## Fix 1: [Method]
+## Fix 2: [Method]
+...
+## Wrapping Up
+## FAQs
+```
 
-### Meta Descriptions
-- 150-160 characters including spaces
-- Include primary keyword
-- Include call-to-action
-- End with complete thought
+### H3 — Sub-sections
+- Use inside an H2 to break down a topic further
+- Optional — only use when a section genuinely needs sub-topics
+- Never use H3 just to add more headings
+- Can use long-tail keywords naturally
 
-### URL Slugs
-- Lowercase only
-- Hyphens between words
-- Include primary keyword
-- 3-5 words ideal
-- Format: `/blog/primary-keyword-phrase`
+**When to use H3:**
+- ✅ Comparison posts: H3 for each tool under a comparison H2 (e.g. `### Cloudflare Turnstile` and `### Google reCAPTCHA` under `## User Experience`)
+- ✅ How-to posts: H3 for sub-steps or optional variations within a step
+- ✅ List posts: H3 for "Pros", "Cons" within each H2 list item
+- ❌ Never use H3 just because a section is getting long — split into a new H2 instead
 
-### Alt Text
-- Describe what image shows
-- Include keyword naturally if relevant
-- 125 characters or less
-- No "image of" or "picture of" (implied)
+### H4 — Granular Labels
+- Use only inside comparison sections to label individual tool/option names
+- Example: Under `### Compatibility` → `#### Cloudflare Turnstile` and `#### Google reCAPTCHA`
+- Very rare — only for deeply structured comparison content
 
----
-
-## Dates & Time
-
-**Date Format**:
-- Month DD, YYYY (January 15, 2025)
-- Or: DD Month YYYY (15 January 2025)
-- **Decision**: [Choose one]
-
-**Time**:
-- 12-hour format with a.m./p.m.: 3:00 p.m.
-- Or: 24-hour format: 15:00
-- **Decision**: [Choose one]
-
-**Time Zones**:
-- Specify when relevant: "3:00 p.m. EST"
-- Or use: "3:00 p.m. Eastern Time"
-
----
-
-## Statistics & Data
-
-### Citing Sources
-- Always cite statistics with sources
-- Format: "According to [Source], [statistic]."
-- Link to original source when possible
-- Include year of data: "In 2024, podcast listeners reached..."
-
-### Presenting Numbers
-- Round large numbers for readability: "1.2 million" not "1,234,567"
-- Use % symbol: 15% (not "percent")
-- Use $ for money: $500 (not "dollars")
-- Include commas: 10,000 not 10000
+### Rules for All Headings
+- Never skip levels — H1 → H2 → H3 in order, never H1 → H3
+- Never use a heading for styling — every heading must introduce new content
+- No punctuation at end of headings (no periods, no exclamation marks)
+- **Sentence case preferred** — "How to fix blurry images" not "How To Fix Blurry Images"
+- Keep headings concise — 4–10 words ideal, max 12
 
 ---
 
-## Images & Media
+## 4. ✍️ Paragraph & Sentence Rules
 
-### Image Captions
-- [ ] Required for all images
-- [ ] Optional, only when needed for context
-- **Decision**: [Choose one]
+### Paragraphs
+- Max **3–4 sentences** per paragraph
+- One idea per paragraph — if a second idea appears, start a new paragraph
+- Never start two consecutive paragraphs with the same word
+- Leave a blank line between every paragraph
 
-**Caption Style**:
-- Sentence case
-- End with period if complete sentence
-- Placement: Below image
+### Sentences
+- Mix short and medium sentences — vary the rhythm
+- **Short** (under 15 words) → creates pace and clarity
+- **Medium** (15–25 words) → adds context and detail
+- **Long** (25+ words) → use sparingly, max 1 per paragraph
+- Active voice always:
+  - ✅ "Nexter loads your page in under 0.5 seconds"
+  - ❌ "Your page is loaded in under 0.5 seconds by Nexter"
 
-### Screenshots
-- Include relevant screenshots when helpful
-- Crop to show only relevant portion
-- Add arrows/highlights if needed to draw attention
-- Alt text should describe what's shown
-
-### Charts & Graphs
-- Include data visualization when it helps understanding
-- Keep design simple and clean
-- Always provide context in surrounding text
-- Alt text should describe the key finding, not just "chart"
-
----
-
-## Brand-Specific Guidelines
-
-### Castos Product References
-
-**Castos Platform**:
-- "Castos" (not "the Castos platform" unless needed for clarity)
-- "Castos analytics dashboard"
-- [Add other product-specific terms]
-
-**Features**:
-- [List how to refer to specific features]
-- [Capitalization conventions for features]
-
-### Competitor References
-- [ ] Name competitors directly when relevant
-- [ ] Use generic terms ("other podcast hosts")
-- **Decision**: [Choose approach]
-
-**If Naming Competitors**:
-- Be fair and factual
-- No disparaging language
-- Focus on differentiation, not criticism
+### Opening Sentences
+- Every paragraph's first sentence must carry the key point
+- Don't build up to the point — lead with it
+- ✅ "Cloudflare Turnstile is better for privacy-focused websites."
+- ❌ "When it comes to privacy, there are a few things to consider, and one of them is..."
 
 ---
 
-## Accessibility
+## 5. 🖊️ Text Formatting Rules
 
-### Screen Reader Friendly
-- Descriptive link text (not "click here")
-- Image alt text for all images
-- Proper heading hierarchy (H1→H2→H3, no skipping)
-- Descriptive link previews
+### Bold (`**text**`)
+- Use for: key terms on first mention, important warnings, feature names, numbers that matter
+- Max 3–4 bold instances per section
+- Never bold entire sentences
+- Never bold for decoration
 
-### Plain Language
-- Write at 8th-10th grade level
-- Define technical terms on first use
-- Use short sentences and paragraphs
-- Break complex ideas into digestible chunks
+### Italic (`*text*`)
+- Use for: mid-post related article links, product/tool names on first mention per section
+- ✅ "*Want to add reCAPTCHA to forms? Here's how to add reCAPTCHA in WordPress.*"
+- Never use italic for decoration or emphasis
 
----
+### Lists — Bullet Points
+- Use for: unordered items, pros/cons, feature lists, tips
+- Each bullet: minimum 1 full sentence (not just 2-word fragments)
+- Max 7 bullets per list — if more, split into sub-sections
+- Never use bullets just to pad content
 
-## Voice & Tone Reminders
+### Lists — Numbered
+- Use for: sequential steps in how-to posts, ranked items
+- Each step must be actionable and clearly distinct from the next
+- If a step has sub-actions, use a bullet list inside the numbered step
 
-### Core Voice Characteristics
-1. Professional yet approachable
-2. Educational and empowering
-3. Podcast creator advocate
-4. Technically accurate but accessible
-5. Results and growth-focused
+### Tables
+- Use for: feature comparisons, pricing tiers, side-by-side tool analysis
+- Always include a header row
+- Keep to **3–4 columns max** for mobile readability
+- Every table needs a brief intro sentence above it
 
-### Tone Variations
-- **How-to content**: Instructive, step-by-step, encouraging
-- **Strategic content**: Authoritative, experienced, actionable
-- **Industry news**: Insightful, analytical, forward-looking
-- **Product content**: Benefit-focused, clear, honest
-
----
-
-## Editing Checklist
-
-Before publishing any content:
-
-**Grammar & Mechanics**:
-- [ ] Spelling checked
-- [ ] Grammar checked
-- [ ] Punctuation correct (Oxford comma, em dashes, etc.)
-- [ ] Numbers formatted consistently
-- [ ] Dates formatted correctly
-
-**Style**:
-- [ ] Follows capitalization guidelines
-- [ ] Uses preferred terminology
-- [ ] Consistent formatting (bold, italics, lists)
-- [ ] Links are descriptive
-- [ ] Voice and tone appropriate
-
-**Structure**:
-- [ ] Strong introduction (hook, problem, promise)
-- [ ] Logical section flow
-- [ ] Proper heading hierarchy
-- [ ] Effective conclusion with CTA
-- [ ] Appropriate section lengths
-
-**SEO**:
-- [ ] Keyword integrated naturally
-- [ ] Meta elements optimized
-- [ ] Internal and external links included
-- [ ] Images have alt text
-- [ ] URL slug optimized
-
-**Quality**:
-- [ ] Factually accurate
-- [ ] Sources cited
-- [ ] No broken links
-- [ ] Provides genuine value
-- [ ] Ready for publication
+### Code Blocks
+- Use for: code snippets, file paths, terminal commands, shortcodes
+- Always specify language: ` ```php `, ` ```bash `, ` ```css `
+- Never paste code as plain text in a paragraph
 
 ---
 
-## Updates & Maintenance
+## 6. 📌 CTA Placement Rules
 
-**Style Guide Version**: 1.0
-**Last Updated**: [Date]
-**Next Review**: [Date]
+CTAs appear in **3 specific locations only**. Never add extra CTAs outside these spots.
 
-This style guide is a living document. Update as Castos brand and voice evolve.
+### CTA Location 1 — Mid-Article Product Mention
+- **Where**: After a relevant section where Nexter solves the problem being discussed
+- **When**: Once or twice per post — never more
+- **Format**: 1–3 sentences. Mention the specific Nexter feature, explain how it helps, link to the specific page.
+- **Link to**: Most relevant specific page (block page, feature page) — not the homepage
 
-**Questions or Additions?**
-If you encounter a style question not covered here, make a decision, document it, and add it to this guide for future reference.
+✅ Good example:
+> The Login Form block from Nexter Blocks is a great way to add reCAPTCHA to your site's login page — no extra plugin needed.
+
+❌ Bad example:
+> Check out Nexter WP! It's the best WordPress theme with tons of features. Click here to learn more about everything we offer.
+
+### CTA Location 2 — Wrapping Up (Closing CTA)
+- **Where**: Last paragraph of the "Wrapping Up" section
+- **Format**: 2–3 sentences. Benefit-first → feature mention → link
+- **Link to**: Pricing page OR free download page
+
+✅ Good example:
+> Nexter Blocks gives you 90+ Gutenberg blocks, built-in image optimization, and AI in every block — all without needing a dozen separate plugins. [Get Nexter free](https://nexterwp.com/download-nexter-free/#download-nexter) or [see full pricing](https://nexterwp.com/pricing/).
+
+❌ Bad example:
+> Buy Nexter WP now! It's amazing and you should get it today. Click the link!
+
+### CTA Location 3 — Email Subscribe Block
+- **Where**: Immediately after "Wrapping Up", before the FAQ section
+- **Format**: One heading + one line of text. No form code — just the copy.
+
+✅ Standard format:
+```
+#### Get Exclusive WordPress Tips, Tricks and Resources Delivered Straight to Your Inbox!
+Subscribe to stay updated with everything happening on WordPress.
+```
+
+---
+
+## 7. ❓ FAQ Section Formatting
+
+**Required for**: comparison posts, how-to tutorials, error fix posts
+**Optional for**: list posts, product feature posts
+
+### Rules
+- Minimum 4 questions, maximum 8
+- Each answer: **40–80 words** — concise and direct
+- H3 for every question
+- Questions must be phrased exactly as users would type them in Google
+- Answers must be self-contained (make sense without reading the full article)
+- **Do NOT use FAQPage schema** — Google restricts it to government/healthcare (Aug 2023)
+
+### FAQ Question Formulas
+- "Is [X] better than [Y]?"
+- "Can I use [X] for free?"
+- "Does [Product] work with [Tool]?"
+- "What is the difference between [X] and [Y]?"
+- "How do I [do X] in WordPress?"
+- "Is [X] GDPR compliant?"
+- "Why can't [X do Y]?"
+
+### FAQ Placement
+```
+[H2 — Wrapping Up] + CTA
+[Email Subscribe CTA]
+[H2 — FAQs on [Topic]]  ← use specific topic, not just "FAQs"
+  [H3 — Question 1?]
+  Answer paragraph...
+  [H3 — Question 2?]
+  Answer paragraph...
+[Related Posts]
+```
+
+---
+
+## 8. 🖼️ Image & Screenshot Rules
+
+### Required Images by Content Type
+
+| Content Type | Minimum Images |
+|---|---|
+| Comparison post | 2 (one per tool being compared) |
+| How-to / tutorial | 1 per major step (H2 level) |
+| List post | 1 featured image minimum |
+| Error fix post | 1 per fix method |
+| Product feature post | 2–3 showing the feature in use |
+
+### Image Rules
+- **Featured image**: Required on every post — placed above the H1
+- **Alt text**: Required on every image, every time — no exceptions
+- **Alt text format**: `[What's shown in image] — [keyword if naturally fits]`
+  - ✅ `Cloudflare Turnstile widget on a WordPress login form — CAPTCHA alternative`
+  - ❌ `image1` or `screenshot`
+- **File naming**: Descriptive, hyphenated, no spaces
+  - ✅ `nexter-blocks-pricing-table-block.webp`
+  - ❌ `Screenshot 2026-03-01.png`
+- **Format**: WebP always — Nexter has built-in image optimization
+- **Captions**: Optional but helpful for annotated screenshots explaining UI elements
+
+---
+
+## 9. 📋 Content-Type Specific Formatting
+
+### Comparison Posts (X vs Y)
+- Open with a brief intro establishing why the comparison matters
+- Define each tool in its own H2 section with Pros/Cons bullet lists
+- Use a comparison table for the main differences (H2 section)
+- Each difference gets its own H3 → H4 for each tool inside it
+- End with "Which Should You Choose?" H2 with a recommendation framework
+- **Always conclude**: "Choose [X] if... Choose Nexter if..."
+- Required: FAQ section (min 4 questions)
+
+### How-To / Tutorial Posts
+- Open with what the reader will achieve by the end
+- Use **numbered steps** (not bullets) for the main process
+- Each step = one H2, or group 2–3 small steps under one H2
+- Include a screenshot or image for each major step
+- Add a "Common Issues & Fixes" H2 near the end
+- Required: FAQ section (min 4 questions)
+
+### List / Resource Posts
+- Each item gets its own H2 (for 5–10 items) or H3 (for 10+ items)
+- Every item needs: name, 2–4 sentence description, key benefit
+- Include a brief "How We Chose These" or "What to Look For" section near the top
+- End with a recommendation: "Best for beginners", "Best free option", etc.
+- Optional: FAQ section
+
+### Error Fix Posts
+- Open by explaining what causes the error (1 short H2)
+- Each fix = its own numbered H2: "Fix 1:", "Fix 2:", etc.
+- Steps within each fix = numbered list
+- Add a "Still Not Fixed?" section at the end directing to support
+- Required: FAQ section (min 3 questions)
+
+### Product Feature Posts
+- Open with the problem the feature solves
+- Show the feature in action with screenshots
+- Include a step-by-step "How to Use [Feature]" section
+- Add use case examples (at least 2)
+- Link to the specific block/feature page
+- Optional: FAQ section
+
+---
+
+## 10. 💬 Expert Quote Blocks
+
+Use named expert quote callouts attributed to a real person with their job title. This is one of the strongest E-E-A-T signals available.
+
+### When to Use
+- Comparison posts — quote a developer or power user on why they prefer one tool
+- How-to posts — quote a team member or customer on a common pain point
+- Product feature posts — quote from the Nexter/POSIMYTH team about the feature
+- Any post where a first-hand insight adds credibility
+
+### Format
+```
+> **"[Quote text — direct, specific, insight-driven. 2–4 sentences max.]"**
+>
+> — [Full Name], [Job Title] at [Company]
+```
+
+### Example
+> **"Nexter's modular architecture means we only load what's actually used on the page. On a typical landing page, that's one CSS file and one JS file — regardless of how many blocks are placed."**
+>
+> — Nexter Development Team, POSIMYTH Innovations
+
+### Rules
+- Always attribute — never use anonymous quotes ("a user said...")
+- Use real names and job titles where possible — or "Nexter Support Team", "POSIMYTH Dev Team"
+- Keep quotes specific and data-driven — avoid vague praise like "it's really great"
+- Place quote blocks after the section that needs supporting evidence, not at random
+- Max **1–2 expert quote blocks** per post
+- Customer testimonials from the reviews page can also be used as expert quotes
+
+---
+
+## 11. 📊 Data-First Writing Rule
+
+Back every major claim with a specific number. Vague claims are weak. Specific numbers are persuasive and build trust.
+
+| ❌ Weak (Vague) | ✅ Strong (Data-backed) |
+|---|---|
+| "Nexter loads really fast" | "Nexter loads in under 0.5 seconds" |
+| "We have lots of blocks" | "90+ Gutenberg blocks, 0 jQuery dependencies" |
+| "It replaces many plugins" | "Replaces 20+ plugins in a single install" |
+| "Trusted by many users" | "Trusted by 20,000+ users" |
+| "Our autofix improved significantly" | "Autofix success jumped from 50% to 80%" |
+
+**Rule**: Every performance, scale, or comparison claim must include a real number. If you don't have a number, reframe the claim or don't make it.
+
+### Nexter's Core Data Points — Always Use These Accurately
+- Loads under **0.5 seconds**
+- **90+** Gutenberg blocks
+- **50+** WordPress extensions
+- **1,000+** starter templates
+- **20,000+** users
+- **1 CSS + 1 JS** file loaded per page
+- **60-day** money-back guarantee
+- **99.99%** uptime
+- **0** jQuery dependencies
+- **28+** unique features
+
+---
+
+## 12. 🔗 Related Article Link Formatting (Mid-Post)
+
+Place italic related links at natural section breaks — after finishing a point, before moving to the next one. Never mid-paragraph.
+
+### Format
+```
+*[Relevant action or goal]? Here's [brief description of linked article].*
+```
+
+### Examples
+- *Want to prevent spam on your website? Here's how to stop contact form spam on WordPress.*
+- *Protect your website from unwanted access. Here's how to secure your WordPress login page.*
+- *Want to add reCAPTCHA to login forms? Here is how to add reCAPTCHA in login form.*
+
+### Rules
+- Max **2–3 per post**
+- Always use URLs from `internal-links-map.md`
+- Never place two related links in the same section
+- Never use as a substitute for proper internal linking
+
+---
+
+## 13. ✅ Style Checklist — Before Submitting Any Post
+
+| Check | Rule |
+|---|---|
+| Post length | Meets minimum for content type |
+| H1 | One only. Contains primary keyword. |
+| H2 usage | Min 2. Describes each section. No level skipping. |
+| H3 usage | Only where genuinely needed — not decorative |
+| Paragraph length | Max 4 sentences. One idea each. |
+| Active voice | No passive constructions throughout |
+| Intro | Validates problem → previews content → no filler opener |
+| Bold / Italic | Used purposefully, not decoratively |
+| Lists | Bullets = unordered. Numbers = steps. No 1-word bullets. |
+| Tables | Header row present. Max 4 columns. |
+| Mid-article CTA | 1–2 times. Specific page link. Benefit-driven. |
+| Closing CTA | In "Wrapping Up". 2–3 sentences. Links to pricing/free. |
+| Email CTA | After "Wrapping Up", before FAQs. |
+| FAQ section | Present for comparison & how-to posts. 4–8 questions. |
+| Images | Featured image set. Alt text on all. WebP format. |
+| Related links | Italic format. Max 3. From `internal-links-map.md`. |
+| No filler phrases | "In today's world", "Moving on to", "It is worth noting", "In the realm of", "It goes without saying", "Needless to say", "At the end of the day", "When it comes to", "The fact of the matter is" |
+| No em dashes | Replace all em dashes (--) with commas or split into two sentences |
+| Expert quote block | Present where relevant. Attributed with name + title. |
+| All claims data-backed | No vague claims — every stat has a real number. |
+| No unverifiable claims | No "#1 theme", "best ever", "world-class" without proof |
+| No manual TOC | Never write a Table of Contents — site generates it automatically |
+| Nexter mentions verified | Every Nexter product feature claim checked against nexterwp.com/docs/ before publishing |
+
+---
+
+## 14. 🚫 Banned Phrases & Writing Patterns
+
+Never use any of the following. These are filler, AI-sounding, or generic phrases that weaken the writing:
+
+### Filler Openers
+- "In today's digital world..."
+- "In the realm of..."
+- "When it comes to..."
+- "It is worth noting that..."
+- "It goes without saying..."
+- "Needless to say..."
+- "At the end of the day..."
+- "The fact of the matter is..."
+- "In this day and age..."
+- "With that being said..."
+- "Moving on to..."
+- "Having said that..."
+- "As we all know..."
+- "Without further ado..."
+
+### Weak Qualifiers
+- "Somewhat", "rather", "quite", "fairly", "very" (unless unavoidable)
+- "It seems", "it appears", "one might say"
+- "Basically", "essentially", "generally speaking"
+
+### Padding Constructions
+- "In order to" → use "to"
+- "Due to the fact that" → use "because"
+- "At this point in time" → use "now"
+- "In the event that" → use "if"
+- "Has the ability to" → use "can"
+
+---
+
+## 15. 🔗 Nexter Product Mention Rules — STRICT
+
+**Before writing any sentence that mentions a Nexter product feature, block, or capability, you MUST verify it exists in the official Nexter documentation.**
+
+### Docs Reference
+- Docs home: https://nexterwp.com/docs/
+- Doc category sitemap: https://nexterwp.com/doc-category-sitemap.xml
+
+### Doc Categories to Check
+| Product | Docs URL |
+|---|---|
+| Nexter Blocks | https://nexterwp.com/help/nexter-blocks/ |
+| Nexter Extension | https://nexterwp.com/help/nexter-extension/ |
+| Nexter Theme | https://nexterwp.com/help/nexter-theme/ |
+| Nexter Builder | https://nexterwp.com/help/nexter-builder/ |
+| Getting Started | https://nexterwp.com/help/getting-started/ |
+| Troubleshooting | https://nexterwp.com/help/troubleshooting/ |
+| Performance Tips | https://nexterwp.com/help/performance-tips/ |
+
+### Rules
+1. **If a feature is NOT in the docs, do not mention it.** Do not assume a block or feature exists based on general knowledge.
+2. **If a block is mentioned, verify the exact block name** matches what's listed in the docs.
+3. **Never invent capabilities** like "Nexter has a built-in X" without docs confirmation.
+4. **Product data points that are always safe to use** (verified):
+   - 90+ Gutenberg blocks
+   - 50+ WordPress extensions
+   - 1,000+ starter templates
+   - 20,000+ users
+   - Loads in under 0.5 seconds
+   - 0 jQuery dependencies
+   - 1 CSS + 1 JS file per page
+   - 60-day money-back guarantee

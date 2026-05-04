@@ -91,7 +91,7 @@ Analyze what's winning for the pillar keyword.
    ```
 
 2. **Fetch Top 3 Pillar/Guide Pages**
-   Use WebFetch on the top 3 ranking comprehensive guides. For each, document:
+   Use WebFetch on the top 3 ranking comprehensive guides **always with `.md` suffix** (e.g., `https://example.com/guide.md`) — saves 70–80% tokens. For POSIMYTH-owned URLs this is mandatory; for external sites try `.md` first, fall back to HTML only if it fails. For each, document:
    - H2/H3 structure
    - Word count estimate
    - Topics covered

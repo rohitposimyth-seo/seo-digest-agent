@@ -112,3 +112,6 @@ env/
 # GA4 Credentials (additional explicit entry)
 ga4-credentials.json
 google-analytics-credentials.json
+
+# MCP server config (contains credentials — never commit)
+.mcp.json

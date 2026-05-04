@@ -16,7 +16,7 @@ Use this command to review and analyze existing your company blog posts for SEO 
 
 ### Content Analysis
 - **URL/File Input**: Accept either a live URL or local file path
-- **Content Extraction**: Pull the full article text, headings, and structure
+- **Content Extraction**: Pull the full article text, headings, and structure. **If given a URL, always fetch the `.md` version** (e.g., `https://nexterwp.com/blog/post.md`) — saves 70–80% tokens. For POSIMYTH-owned sites this is mandatory. For external sites, try `.md` first and fall back to HTML only if it fails.
 - **Publication Date Check**: Note when content was originally published
 - **Current Relevance**: Identify outdated information, statistics, or references
 - **Completeness**: Assess if topic coverage is comprehensive or has gaps

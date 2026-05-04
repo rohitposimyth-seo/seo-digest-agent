@@ -2,7 +2,7 @@
 WordPress Publisher Module
 
 Publishes draft articles to WordPress as draft posts via the REST API.
-Supports Yoast SEO meta fields (title, description, focus keyphrase).
+Supports Rank Math SEO meta fields (title, description, focus keyphrase).
 """
 
 import os
@@ -72,22 +72,35 @@ class WordPressPublisher:
         h1_match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
         title = h1_match.group(1).strip() if h1_match else ''
 
-        # Extract metadata fields (format: **Field Name**: Value)
+        # Extract metadata fields — handles both formats:
+        # Frontmatter style: Meta Title: value
+        # Bold style: **Meta Title**: value
         def extract_field(field_name: str) -> str:
-            pattern = rf'\*\*{field_name}\*\*:\s*(.+?)(?:\n|$)'
+            # Try plain frontmatter style first (inside --- block or start of file)
+            pattern = rf'^{re.escape(field_name)}:\s*(.+?)(?:\n|$)'
+            match = re.search(pattern, content, re.IGNORECASE | re.MULTILINE)
+            if match:
+                return match.group(1).strip()
+            # Fall back to bold markdown style
+            pattern = rf'\*\*{re.escape(field_name)}\*\*:\s*(.+?)(?:\n|$)'
             match = re.search(pattern, content, re.IGNORECASE)
             return match.group(1).strip() if match else ''
 
         meta_title = extract_field('Meta Title')
         meta_description = extract_field('Meta Description')
-        target_keyword = extract_field('Target Keyword')
+        # Support both 'Primary Keyword' (rewrite files) and 'Target Keyword' (draft files)
+        target_keyword = extract_field('Primary Keyword') or extract_field('Target Keyword')
         secondary_keywords = extract_field('Secondary Keywords')
         category = extract_field('Category')
         tags = extract_field('Tags')
 
-        # Extract URL slug - handle both formats
+        # Extract URL slug - handle both frontmatter and bold formats
         slug = ''
-        slug_match = re.search(r'\*\*URL Slug\*\*:\s*/?(?:blog/)?([^\s/]+)/?', content, re.IGNORECASE)
+        # Try frontmatter style: URL Slug: /blog/some-slug/ (KEEP, do not change)
+        slug_match = re.search(r'^URL Slug:\s*/?(?:blog/)?([^\s/(]+)', content, re.IGNORECASE | re.MULTILINE)
+        if not slug_match:
+            # Try bold style: **URL Slug**: /blog/some-slug/
+            slug_match = re.search(r'\*\*URL Slug\*\*:\s*/?(?:blog/)?([^\s/]+)/?', content, re.IGNORECASE)
         if slug_match:
             slug = slug_match.group(1).strip()
         else:
@@ -96,17 +109,21 @@ class WordPressPublisher:
             slug = re.sub(r'[\s_]+', '-', slug)
 
         # Remove metadata section from content for body
-        # Content starts after the metadata block (after the first ---)
         body_content = content
 
-        # Remove the H1 title
-        body_content = re.sub(r'^#\s+.+\n', '', body_content, count=1)
+        # Strip --- frontmatter block (rewrite file format)
+        # Removes everything between the opening --- and closing --- including CHANGE NOTES
+        body_content = re.sub(r'^---\s*\n.*?\n---\s*\n', '', body_content, count=1, flags=re.DOTALL)
 
-        # Remove metadata lines
+        # Remove the H1 title
+        body_content = re.sub(r'^#\s+.+\n', '', body_content, count=1, flags=re.MULTILINE)
+
+        # Remove bold-style metadata lines (draft file format)
         metadata_patterns = [
             r'\*\*Meta Title\*\*:.+\n?',
             r'\*\*Meta Description\*\*:.+\n?',
             r'\*\*Target Keyword\*\*:.+\n?',
+            r'\*\*Primary Keyword\*\*:.+\n?',
             r'\*\*Secondary Keywords\*\*:.+\n?',
             r'\*\*URL Slug\*\*:.+\n?',
             r'\*\*Category\*\*:.+\n?',
@@ -118,8 +135,7 @@ class WordPressPublisher:
         for pattern in metadata_patterns:
             body_content = re.sub(pattern, '', body_content, flags=re.IGNORECASE)
 
-        # Remove leading/trailing horizontal rules and whitespace
-        body_content = re.sub(r'^[\s\-]*\n', '', body_content)
+        # Remove leading/trailing whitespace
         body_content = body_content.strip()
 
         return {
@@ -309,7 +325,7 @@ class WordPressPublisher:
         response.raise_for_status()
         return response.json()
 
-    def set_yoast_meta(
+    def set_rank_math_meta(
         self,
         post_id: int,
         meta_title: str,
@@ -318,33 +334,31 @@ class WordPressPublisher:
         post_type: str = 'posts'
     ) -> Dict:
         """
-        Set Yoast SEO meta fields on a post, page, or custom post type
-
-        Requires the SEO Machine Yoast REST plugin to be installed:
-        wp-content/mu-plugins/seo-machine-yoast-rest.php
+        Set Rank Math SEO meta fields on a post, page, or custom post type
+        via the standard WordPress REST API meta object.
+        No custom plugin required — Rank Math registers these fields with show_in_rest: true.
 
         Args:
             post_id: WordPress post ID
             meta_title: SEO title
             meta_description: Meta description
-            focus_keyphrase: Focus keyphrase (target keyword)
+            focus_keyphrase: Focus keyphrase (primary keyword)
             post_type: WordPress post type endpoint ('posts', 'pages', or custom type)
 
         Returns:
             Updated post response
         """
-        # Use the yoast_seo field provided by our mu-plugin
-        yoast_data = {
-            'yoast_seo': {
-                'seo_title': meta_title,
-                'meta_description': meta_description,
-                'focus_keyphrase': focus_keyphrase
+        rank_math_data = {
+            'meta': {
+                'rank_math_title': meta_title,
+                'rank_math_description': meta_description,
+                'rank_math_focus_keyword': focus_keyphrase
             }
         }
 
         response = self.session.post(
             f"{self.api_base}/{post_type}/{post_id}",
-            json=yoast_data
+            json=rank_math_data
         )
         response.raise_for_status()
         return response.json()
@@ -406,9 +420,9 @@ class WordPressPublisher:
 
         post_id = post['id']
 
-        # Set Yoast meta
+        # Set Rank Math meta
         if draft['meta_title'] or draft['meta_description'] or draft['target_keyword']:
-            self.set_yoast_meta(
+            self.set_rank_math_meta(
                 post_id=post_id,
                 meta_title=draft['meta_title'],
                 meta_description=draft['meta_description'],
@@ -465,7 +479,7 @@ def main():
         print(f"\n✓ Parsed draft file")
         print(f"✓ Converted {result['word_count']:,} words to HTML")
         print(f"✓ Created WordPress {type_label} draft (ID: {result['post_id']})")
-        print(f"✓ Set Yoast meta (title, description, focus keyphrase)")
+        print(f"✓ Set Rank Math meta (title, description, focus keyphrase)")
 
         if result['categories']:
             print(f"✓ Assigned categories: {', '.join(result['categories'])}")
