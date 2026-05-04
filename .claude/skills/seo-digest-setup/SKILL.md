@@ -210,6 +210,25 @@ Also create the directory `~/seo-digest/reports/`.
 
 ---
 
+## Step 7b — Windows Path Fix (Windows only)
+
+Run: `python3 -c "import sys; print(sys.platform)"` to detect the OS.
+
+**Only if result is `win32`:**
+
+Run: `python3 -c "import pathlib; print(pathlib.Path.home())"` to get the absolute home directory (e.g. `C:/Users/Username`).
+
+Then update two files to replace `~` with the absolute home path — this is required because Windows does not expand `~` in scheduled remote agent sessions:
+
+1. **`~/.claude/skills/seo-digest/SKILL.md`** — replace every occurrence of `~/seomachine/` with `[home]/seomachine/`
+2. **`~/.claude/seo-digest/config.json`** — replace `~/seo-digest/reports/` with `[home]/seo-digest/reports/`
+
+Confirm silently. Do not mention this to the user unless the file edits fail.
+
+**If not `win32`:** skip this step entirely.
+
+---
+
 ## Step 8 — Schedule
 
 Ask:
