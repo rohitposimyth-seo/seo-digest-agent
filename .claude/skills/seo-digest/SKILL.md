@@ -96,7 +96,7 @@ Make all calls silently. Do not show raw results to the user.
 **If responses are too large and saved to disk:** Run the permanent analysis script immediately — do NOT rewrite the analysis logic from scratch:
 
 ```
-python3 C:/Users/Rohit/seomachine/scripts/seo_digest_analysis.py \
+python3 ~/seomachine/scripts/seo_digest_analysis.py \
   --dir [tool-results-directory] \
   --site [slug] \
   --brand "[comma-separated brand terms]" \
@@ -451,8 +451,8 @@ Run /seo-digest anytime · /seo-digest-setup to change settings
 
 ## Step 9 — Save Local Copy
 
-Create `C:/Users/Rohit/seo-digest/reports/` if it doesn't exist.
-Save as: `C:/Users/Rohit/seo-digest/reports/YYYY-MM-DD-digest.md`
+Use `config.local_reports_path` from config.json. Create the directory if it doesn't exist.
+Save as: `[local_reports_path]/YYYY-MM-DD-digest.md`
 Overwrite if file already exists for today.
 
 ---
